@@ -1,0 +1,20 @@
+.linkContainer {
+    background-color: #f95959;
+    box-shadow: 0 1px 4px #f95959;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.link:hover {
+    transform: scale(115%);
+}
