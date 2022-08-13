@@ -188,14 +188,53 @@ h1 {
     }
 
     .cartProduct {
-        width: 450px;
-        height: 230px;
+        display: flex;
+        width: 200px;
+        height: 300px;
+        flex-direction: column;
+        background-color: #233142;
+        margin-top: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+        transition: 0.5s; 
     }
 
     .removeFromCart{
         padding-left: 0;
         padding-right: 0;
         margin-right: 0;
+        margin-bottom: 10px;
         height: 48px;
+    }
+    
+    .cartProduct img {
+        background-size: cover;
+        height: 75%;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+
+    .cartProduct p {
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .inputContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .cartProduct input {
+        height: 18px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        margin-left: 10px;
+        font-size: 20px;
     }
 }

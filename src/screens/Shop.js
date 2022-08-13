@@ -39,6 +39,16 @@ function Shop(props) {
       setSelectedCompany(event.currentTarget.textContent);
     } 
   };
+
+  const getCartItem = (id) => {
+    let x = null;
+
+    cartItems.map((item) => {
+      if(item.id === id) { x = item.quantity; }
+    })
+
+    return x;
+  }
   
   useEffect(() => {
     if(cartItems.length !== 0) {
@@ -90,6 +100,7 @@ function Shop(props) {
               if(selectedCompany == product.company){
                 return(
                   <div class='product'>
+                    { getCartItem(product._id) != null ? <div class='product-cartQuantity'>{ getCartItem(product._id) }</div> : null }
                     <img src={product.image}></img>
                     <p>{product.name}: {product.price}$</p>
                     <div id={product._id} onClick={addToCartHandler}>Add to cart</div>
@@ -99,6 +110,7 @@ function Shop(props) {
             else{
               return(
                 <div class='product'>
+                  { getCartItem(product._id) != null ? <div class='product-cartQuantity'>{ getCartItem(product._id) }</div> : null }
                   <img src={product.image}></img>
                   <p>{product.name}: {product.price}$</p>
                   <div id={product._id} onClick={addToCartHandler}>Add to cart</div>

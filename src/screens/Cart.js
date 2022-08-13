@@ -90,8 +90,8 @@ function Cart(products) {
                   <div class='cartProduct'>
                     <img src={product.image}></img>
                     <p>{product.name}: {product.price}$</p>
-                    <p>Count</p>
-                    <div class='inputContainer'><input class='qt' type='number' min='1' defaultValue={product.quantity} id={product.id} onChange={changeQtHandler}></input></div>
+                    <div class='inputContainer'><p>Count</p>
+                    <input class='qt' type='number' min='1' defaultValue={product.quantity} id={product.id} onChange={changeQtHandler}></input></div>
                     <p>Final price: {product.quantity * product.price}$</p>
                     <div id={product.id} class='removeFromCart' onClick={removePFromCart}>Remove from cart</div>
                   </div>

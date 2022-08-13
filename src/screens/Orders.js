@@ -29,7 +29,7 @@ function Orders(props) {
     }
 
     const search = (event) => {
-        if(Object.keys(getQuery()).length !== 0) { dispatch(getOrders(getQuery())); }
+        if(Object.keys(getQuery()).length === 0) { dispatch(getOrders(getQuery())); }
     }
 
     const getPrice = (products) => {

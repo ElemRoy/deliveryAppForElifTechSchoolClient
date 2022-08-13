@@ -13,7 +13,6 @@ h1 {
 }
 
 .childContainer {
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
@@ -76,6 +75,7 @@ h1 {
 }
 
 .product {
+    position: relative;
     width: 200px;
     height: 250px;
     background-color: #233142;
@@ -98,13 +98,14 @@ h1 {
     border-top-right-radius: 15px;
 }
 
+
 .product p {
     text-align: left;
     margin-top: 3px;
     margin-left: 10px;
 }
 
-.product div {
+.product div:not(.product-cartQuantity) {
     background-color: #f95959;
     margin-left: 77px; 
     width: 110px;
@@ -122,6 +123,18 @@ h1 {
 
 .closed {
     color: black;
+}
+
+.product-cartQuantity {
+    position: absolute;
+    background-color: #f95959;
+    border-radius: 50%;
+    width: fit-content;
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 24px;
+    left: 177px;
+    top: -6px;
 }
 
 .activated {
